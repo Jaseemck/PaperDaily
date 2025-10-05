@@ -54,17 +54,6 @@ A Flask web app that emails you a daily research paper or article from your chos
     ```
     - Visit [http://localhost:5000](http://localhost:5000) to use the web interface.
 
-### Deploying on Render.com
-
-1. Push your code to GitHub.
-2. Create a `Procfile`:
-    ```
-    web: gunicorn app:app
-    worker: python app.py
-    ```
-3. Create a new Web Service and a Background Worker on [Render.com](https://render.com/), both pointing to your repo.
-4. Set `EMAIL_ADDRESS` and `EMAIL_PASSWORD` as environment variables in Render’s dashboard.
-
 ## How It Works
 
 - **Weekdays:** Each subscriber gets a random paper from their selected arXiv domains.
